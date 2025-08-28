@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: little-cat-questionnaire
+  data:
+    redis:
+      database: 0 # Redis 数据库索引（默认为 0）
+      host: 106.14.180.160 # Redis 服务器地址
+      port: 6379 # Redis 服务器连接端口
+      timeout: 5s # 读超时时间
+      connect-timeout: 3s # 链接超时时间
+      password: redis_sbXDyi
+  servlet:
+    multipart:
+      max-file-size: 100MB  # 设置最大文件上传大小为100MB
+      max-request-size: 200MB # 设置最大请求大小为200MB
+server:
+  port: 8088
