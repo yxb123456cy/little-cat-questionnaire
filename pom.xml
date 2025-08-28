@@ -98,6 +98,21 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <!-- 使用 pom.xml 的 version 作为 Tag -->
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <!-- 自动更新子模块版本（如果有多模块项目） -->
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!-- 推送时不执行 GPG 签名 -->
+                    <pushChanges>true</pushChanges>
+                    <!-- 是否允许 snapshot 发布 -->
+                    <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
